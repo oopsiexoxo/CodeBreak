@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>CYBER DEFENSE</h1>
+            <div id="stats">
+                <span id="health-display">Server Integrity: 100%</span>
+                <span id="money-display">Crypto: 100</span>
+                <span id="wave-display">Wave: 1</span>
+            </div>
+        </header>
+        
+        <div id="main-area">
+            <canvas id="game-canvas" width="800" height="600"></canvas>
+            
+            <div id="sidebar">
+                <h2>Defenses</h2>
+                <div class="tower-btn" onclick="selectTower('firewall')">
+                    <div class="icon firewall-icon"></div>
+                    <span>Firewall (50)</span>
+                    <small>Basic filtering</small>
+                </div>
+                <div class="tower-btn" onclick="selectTower('antivirus')">
+                    <div class="icon antivirus-icon"></div>
+                    <span>Antivirus (100)</span>
+                    <small>High damage</small>
+                </div>
+                <div class="tower-btn" onclick="selectTower('ips')">
+                    <div class="icon ips-icon"></div>
+                    <span>IPS (150)</span>
+                    <small>Rapid fire</small>
+                </div>
+                
+                <div id="controls">
+                    <button id="start-wave-btn">Start Wave</button>
+                </div>
+
+                <div id="info-panel">
+                    <p>Select a defense and click on the grid to place it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
