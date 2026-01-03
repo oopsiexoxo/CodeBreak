@@ -23,14 +23,14 @@ UI_BG = (15, 15, 20)
 
 # Game Settings
 STARTING_MONEY = 450
-STARTING_LIVES = 20
+STARTING_LIVES = 10
 
 # Damage Multipliers (Tower vs Enemy Type)
 DAMAGE_MULTIPLIERS = {
     "FIREWALL": {
         "DDOS": 2.0,       # Effective filtering
-        "MALWARE": 1.2,
-        "PHISHING": 0.5,   # Bypasses filter
+        "MALWARE": 2.0,
+        "PHISHING": 0.2,   # Bypasses filter
         "SOCIAL_ENG": 0.5
     },
     "ANTIVIRUS": {
@@ -74,7 +74,7 @@ TOWER_TYPES = {
         "name": "IDS", # Intrusion Detection System
         "cost": 400,
         "range": 250,
-        "damage": 5,
+        "damage": 2,
         "rate": 50, # Very fast fire rate
         "color": NEON_PURPLE,
         "description": "Anomaly Detect. Strong vs Phishing/Social."
@@ -248,7 +248,7 @@ LOOT_TYPES = {
     "PATCH": {
         "color": (0, 255, 100), # Green
         "radius": 10,
-        "chance": 0.02, # 2% chance
+        "chance": 0.1, # 10% chance
         "duration": 5.0,
         "effect": "life",
         "value": 1
